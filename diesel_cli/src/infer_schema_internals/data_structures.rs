@@ -91,7 +91,7 @@ impl fmt::Display for ColumnType {
             write!(out, "Nullable<")?;
         }
         if self.is_array {
-            write!(out, "Array<Nullable<")?;
+            write!(out, "Array<")?;
         }
         if self.is_unsigned {
             write!(out, "Unsigned<")?;
@@ -101,7 +101,7 @@ impl fmt::Display for ColumnType {
             write!(out, ">")?;
         }
         if self.is_array {
-            write!(out, ">>")?;
+            write!(out, ">")?;
         }
         if self.is_nullable {
             write!(out, ">")?;
